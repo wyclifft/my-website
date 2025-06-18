@@ -981,12 +981,12 @@ input, select, textarea {
 
 		.image.fit {
 			display: block;
-			width: 100%;
+			width: 90%;
 		}
 
 		.image.left {
 			float: left;
-			margin: 0 2em 2em 0;
+			margin: 0 2em 0em 2;
 		}
 
 		.image.centered {
