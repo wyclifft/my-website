@@ -2242,10 +2242,13 @@ input, select, textarea {
 		}
 
 /* Intro */
+    .hero .content {
+    	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
 
 	#intro {
 		background: url("images/overlay.png"), url("../../images/intro.jpg");
-		background-size: 200px 200px, cover;
+		background-size: 250px 250px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;
 		background-repeat: repeat, no-repeat;
