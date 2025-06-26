@@ -647,6 +647,36 @@ input, select, textarea {
 
 		}
 
+.menu-toggle {
+	display: none;
+}
+
+.menu-icon {
+	display: none;
+	font-size: 28px;
+	cursor: pointer;
+	color: white;
+}
+
+@media (max-width: 768px) {
+	.menu-icon {
+		display: block;
+	}
+
+	.nav-link {
+		display: none;
+		flex-direction: column;
+		background: #222;
+		position: absolute;
+		top: 60px;
+		left: 0;
+		width: 100%;
+	}
+
+	.menu-toggle:checked + .menu-icon + .nav .nav-link {
+		display: flex;
+	}
+}
 /* Button */
 
 	input[type="button"],
