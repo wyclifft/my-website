@@ -672,13 +672,12 @@ input, select, textarea {
 
 .nav-links {
   display: flex;
-  transition: all 0.3s ease;
-
   /* desktop styling... */
 }
 
 @media (max-width: 768px) {
   .nav-links {
+  	transition: all 0.3s ease;
     display: none;
     flex-direction: column;
     position: absolute;
