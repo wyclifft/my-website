@@ -672,6 +672,8 @@ input, select, textarea {
 
 .nav-links {
   display: flex;
+  transition: all 0.3s ease;
+
   /* desktop styling... */
 }
 
