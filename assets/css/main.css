@@ -662,6 +662,16 @@ input, select, textarea {
 
 		}
 
+.nav-links::-webkit-scrollbar {
+  width: 6px;
+}
+
+.nav-links::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+
 /* Desktop nav */
 .nav-links {
   display: flex;
@@ -681,19 +691,19 @@ input, select, textarea {
     z-index: 1001;
   }
 
-   .nav-links {
-  max-height: 80vh;         /* or a fixed height like 300px */
-  overflow-y: auto;         /* enables scrolling */
-  position: absolute;
-  top: 60px;                /* adjust based on navbar height */
-  right: 0;
-  width: 100%;
-  background-color: #111;
-  z-index: 999;
-  display: none;
-  flex-direction: column;
-}
-
+  .nav-links {
+    max-height: 80vh;              /* LIMITS height */
+    overflow-y: auto;              /* ENABLES vertical scroll */
+    position: absolute;
+    top: 60px;                     /* adjust if your header is taller */
+    right: 0;
+    width: 100%;
+    background-color: #111;
+    z-index: 999;
+    display: none;
+    flex-direction: column;
+    padding: 10px 0;
+  }
 
   #menu-toggle:checked + label + .nav-links {
     display: flex;
