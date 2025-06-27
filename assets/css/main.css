@@ -662,6 +662,54 @@ input, select, textarea {
 
 		}
 
+/* Desktop nav */
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+/* Mobile responsive nav */
+@media (max-width: 768px) {
+  label.menu-toggle {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #111;
+    color: white;
+    position: relative;
+    z-index: 1001;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+    position: absolute;
+    top: 50px;      /* adjust based on your navbar height */
+    right: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 1000;
+  }
+
+  #menu-toggle:checked + label + .nav-links {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 15px 0;
+    text-align: center;
+    list-style: none;
+  }
+
+  .nav-links li a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+  }
+}
 
 
 .menu-toggle {
