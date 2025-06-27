@@ -60,6 +60,21 @@ mark {
 	color: inherit;
 }
 
+.demo-button {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #007bff; /*Bootstrap blue*/
+	color: white;
+	border-radius: 5px;
+	text-decoration: none;
+	font-weight: bold;
+	transition: background-color 0.3s ease;
+}
+
+.demo-button:hover {
+	background-color: #0056b3;
+}
+
 input::-moz-focus-inner {
 	border: 0;
 	padding: 0;
