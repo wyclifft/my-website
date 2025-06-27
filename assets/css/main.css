@@ -727,15 +727,18 @@ input, select, textarea {
 
 @media (max-width: 768px) {
   .nav-links {
-  	transition: all 0.3s ease;
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: #111;
-    width: 200px;
-  }
+  max-height: 80vh;         /* or a fixed height like 300px */
+  overflow-y: auto;         /* enables scrolling */
+  position: absolute;
+  top: 60px;                /* adjust based on navbar height */
+  right: 0;
+  width: 100%;
+  background-color: #111;
+  z-index: 999;
+  display: none;
+  flex-direction: column;
+}
+
 
   label.menu-toggle {
     display: block;
