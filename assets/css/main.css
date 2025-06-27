@@ -662,6 +662,10 @@ input, select, textarea {
 
 		}
 
+
+
+/* Hide the nav links by default on small screens */
+
 .menu-toggle {
 	display: none;
 }
@@ -677,6 +681,44 @@ input, select, textarea {
 	.menu-icon {
 		display: block;
 	}
+/* Hide the nav links by default on small screens */
+.menu-toggle {
+  display: none;
+}
+
+/* Style the hamburger icon (label) */
+label.menu-toggle {
+  font-size: 30px;
+  display: none;
+  cursor: pointer;
+}
+
+/* Show menu button on small screens */
+@media (max-width: 768px) {
+  label.menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 10px;
+  }
+
+  #menu-toggle:checked + label + .nav .nav-links {
+    display: flex;
+  }
+}
+
+
+
+
+
 
 	.nav-link {
 		display: none;
