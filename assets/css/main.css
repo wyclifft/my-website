@@ -29,6 +29,15 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+.nav-links::-webkit-scrollbar {
+  width: 6px;
+}
+
+.nav-links::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
 body {
 	line-height: 1;
 }
@@ -667,7 +676,18 @@ input, select, textarea {
 /* Desktop nav */
 .nav-links {
   display: flex;
-  gap: 15px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: static;
+  width: auto;
+  padding: 0;
+  background: none;
+}
+
+.menu-toggle {
+  display: none; /* hide hamburger on desktop */
 }
 
 /* Mobile responsive nav */
