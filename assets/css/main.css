@@ -664,53 +664,33 @@ input, select, textarea {
 
 
 
-/* Hide the nav links by default on small screens */
-
 .menu-toggle {
-	display: none;
-}
-
-.menu-icon {
-	display: none;
-	font-size: 28px;
-	cursor: pointer;
-	color: white;
-}
-
-@media (max-width: 768px) {
-	.menu-icon {
-		display: block;
-	}
-/* Hide the nav links by default on small screens */
-.menu-toggle {
-  display: none;
-}
-
-/* Style the hamburger icon (label) */
-label.menu-toggle {
   font-size: 30px;
   display: none;
   cursor: pointer;
 }
 
-/* Show menu button on small screens */
+.nav-links {
+  display: flex;
+  /* desktop styling... */
+}
+
 @media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #111;
+    width: 200px;
+  }
+
   label.menu-toggle {
     display: block;
   }
 
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #111;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 200px;
-    padding: 10px;
-  }
-
-  #menu-toggle:checked + label + .nav .nav-links {
+  #menu-toggle:checked + label + .nav-links {
     display: flex;
   }
 }
@@ -720,20 +700,8 @@ label.menu-toggle {
 
 
 
-	.nav-link {
-		display: none;
-		flex-direction: column;
-		background: #222;
-		position: absolute;
-		top: 60px;
-		left: 0;
-		width: 100%;
-	}
 
-	.menu-toggle:checked + .menu-icon + .nav .nav-link {
-		display: flex;
-	}
-}
+	
 /* Button */
 
 	input[type="button"],
