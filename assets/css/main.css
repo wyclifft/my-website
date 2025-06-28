@@ -2384,6 +2384,7 @@ input, select, textarea {
   background-position: top left, bottom center;
   background-repeat: repeat, no-repeat;
   padding-top: 100px; 
+  color: black;
 }
 	
 
@@ -2446,3 +2447,46 @@ input, select, textarea {
 			}
 
 		}
+
+/* === Custom Enhancements === */
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global transition for smooth effects */
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Fade-in animation for sections */
+section {
+  animation: fadeIn 1.2s ease-in-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Enhanced button interactions */
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+.button:active {
+  transform: scale(0.98);
+}
+
+/* Smooth transition for nav menu toggle */
+.nav-links {
+  transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  opacity: 0;
+}
+#menu-toggle:checked + label + .nav-links {
+  opacity: 1;
+}
